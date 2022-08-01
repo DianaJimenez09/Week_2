@@ -1,16 +1,19 @@
 class Person {
+  constructor(colorPelo, colorOjos, altura, peso) {
+    this.colorPelo = colorPelo;
+    this.colorOjos = colorOjos;
+    this.height = altura;
+    this.width = peso;
+    this.genero;
+    this.edad;
+    this.nacionalidad;
+  }
 
-    constructor(coloPelo, colorOjos, nacionalidad){
-        this.coloPelo = coloPelo;
-        this.colorOjos = colorOjos;
-        this.altura = altura;
-        this.genero = genero;
-        this.edad = edad;
-        this.nacionalidad = nacionalidad;
-
-    }
+  calcIMC() {
+    return (this.height * this.width) / 100;
+  }
 }
 
-let PersonA = new Person ("castaño","marrones","española")
+const persona1 = new Person("rojo", "Marrones", 174, 67);
 
-console.log(PersonA)
+console.log(persona1.calcIMC());
